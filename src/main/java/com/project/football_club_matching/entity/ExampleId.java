@@ -5,7 +5,10 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
+import lombok.Getter;
+
 @Embeddable
+@Getter
 public class ExampleId implements Serializable {
     
     private Long questionId;

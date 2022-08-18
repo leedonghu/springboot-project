@@ -30,6 +30,6 @@ public class Example {
 
     private Long score;
 
-    @OneToMany
-    private List<Team> teams = new ArrayList<>();
+    
+    private String teams;
 }

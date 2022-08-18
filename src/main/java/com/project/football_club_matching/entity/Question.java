@@ -21,7 +21,8 @@ public class Question {
     private Long id;
 
     private String Content;
+    
 
-    @OneToMany(mappedBy = "question", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "question", fetch = FetchType.EAGER)
     private List<Example> examples = new ArrayList<>();
 }
