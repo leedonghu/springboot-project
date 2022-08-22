@@ -18,7 +18,7 @@
             <div>${que.content}</div>
             <div class="wrapper">
                 <c:forEach items="${que.examples}" var="exam">
-                    <div><input type="radio" class="form-check-input"  name="${que.id}" value="${exam.id.id}"></div>
+                    <div><input type="radio" class="form-check-input"  name="result${que.id}" value="${que.id}${exam.id.id}"></div>
                 </c:forEach>
             </div>
         </c:forEach>

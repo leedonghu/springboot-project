@@ -28,7 +28,7 @@ public class Example {
     @JoinColumn(name = "QUESTION_ID")
     private Question question;
 
-    private Long score;
+    private int score;
 
     
     private String teams;

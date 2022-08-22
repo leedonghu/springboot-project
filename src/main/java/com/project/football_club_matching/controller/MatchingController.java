@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.project.football_club_matching.entity.Member;
 import com.project.football_club_matching.entity.Question;
+import com.project.football_club_matching.entity.QuestionResult;
 import com.project.football_club_matching.service.MatchingService;
 
 @Controller
@@ -29,5 +30,12 @@ public class MatchingController {
         return "home";
     }
 
-    
+    @RequestMapping(value = "/home", method = RequestMethod.POST)
+    public String getData(QuestionResult questionResult, Model model){
+        
+        String result = matchingService.getResult(questionResult);
+
+        model.addAttribute("result", result);
+        return "result";
+    }
 }
