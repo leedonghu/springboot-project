@@ -12,6 +12,7 @@ import org.springframework.stereotype.Repository;
 import com.project.football_club_matching.entity.Example;
 import com.project.football_club_matching.entity.Member;
 import com.project.football_club_matching.entity.Question;
+import com.project.football_club_matching.entity.Team;
 
 @Repository
 public class MatchingRepository {
@@ -21,6 +22,14 @@ public class MatchingRepository {
 
     public void save(Member member){
         em.persist(member);
+    }
+
+    public Member find(Long id){
+        return em.find(Member.class, id);
+    }
+
+    public Team findTeam(String teamName){
+        return em.find(Team.class, teamName);
     }
 
     @Transactional

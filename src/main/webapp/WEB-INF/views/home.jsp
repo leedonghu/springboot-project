@@ -6,6 +6,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style>
+    .container{
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+    }
     .wrapper{
         display: flex;
     }
@@ -13,16 +18,19 @@
 <title>Insert title here</title>
 </head>
 <body>
-    <form action="/home" method="post">
-        <c:forEach items="${questions}" var="que">
-            <div>${que.content}</div>
-            <div class="wrapper">
-                <c:forEach items="${que.examples}" var="exam">
-                    <div><input type="radio" class="form-check-input"  name="result${que.id}" value="${que.id}${exam.id.id}"></div>
-                </c:forEach>
-            </div>
-        </c:forEach>
-        <button type="submit">전송</button>
-    </form>
+    <div class="container">
+        <form action="/home/${id}" method="post">
+            
+            <c:forEach items="${questions}" var="que">
+                <div>${que.content}</div>
+                <div class="wrapper">
+                    <c:forEach items="${que.examples}" var="exam">
+                        <div><input type="radio" class="form-check-input"  name="result${que.id}" value="${que.id}${exam.id.id}"></div>
+                    </c:forEach>
+                </div>
+            </c:forEach>
+            <button type="submit">전송</button>
+        </form>
+    </div>
 </body>
 </html>

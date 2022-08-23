@@ -1,14 +1,11 @@
 package com.project.football_club_matching.entity;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+
 
 import lombok.Getter;
 
@@ -21,10 +18,9 @@ public class Member {
     @Column(name = "MEMBER_ID")
     private Long id;
 
-    @OneToMany(fetch = FetchType.LAZY)
-    private List<Question> questions = new ArrayList<>();
+    private String teamName;
 
-    public List<Question> getQuestions(){
-        return questions;
+    public void setTeamName(String teamName){
+        this.teamName = teamName;
     }
 }

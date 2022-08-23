@@ -3,9 +3,17 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+    .container{
+        display: flex;
+        justify-content: center;
+        font-size: 100px;
+        font-weight: bold;
+    }
+</style>
 <title>Insert title here</title>
 </head>
 <body>
-    <div>${result}</div>
+    <div class="container">${result}</div>
 </body>
 </html>

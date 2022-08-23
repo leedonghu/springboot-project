@@ -17,7 +17,9 @@ public class Team {
     @Id
     private String name;
 
-    private Long count;
+    private Integer count;
 
-    
+    public void setCount(int count){
+        this.count = count;
+    }
 }

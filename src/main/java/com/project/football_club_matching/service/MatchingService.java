@@ -13,6 +13,7 @@ import com.project.football_club_matching.entity.Example;
 import com.project.football_club_matching.entity.Member;
 import com.project.football_club_matching.entity.Question;
 import com.project.football_club_matching.entity.QuestionResult;
+import com.project.football_club_matching.entity.Team;
 import com.project.football_club_matching.repository.MatchingRepository;
 
 @Service
@@ -29,7 +30,16 @@ public class MatchingService {
         matchingRepository.save(member);
     }
 
-    public String getResult(QuestionResult result){
+    public Member find(Long id){
+        return matchingRepository.find(id);
+    }
+
+    public void countTeam(String teamName){
+        Team team = matchingRepository.findTeam(teamName);
+        team.setCount(team.getCount() + 1);
+    }
+
+    public String getResult(QuestionResult result, Long id){
         List<String> resultList = result.getResultList();
         List<Example> examples = new ArrayList<>();
         for(String str : resultList){
@@ -49,6 +59,11 @@ public class MatchingService {
         }
 
         String teamName = result(examples);
+        countTeam(teamName);
+        Member member = find(id);
+        
+        member.setTeamName(teamName);
+        
         return teamName;
     }
 
