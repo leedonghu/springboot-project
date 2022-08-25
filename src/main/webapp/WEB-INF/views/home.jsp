@@ -5,32 +5,41 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="js/home.js">
 <style>
-    .container{
+    .main-app{
         margin-top: 100px;
         display: flex;
         justify-content: center;
     }
-    .wrapper{
+    .question{
         display: flex;
     }
 </style>
 <title>Insert title here</title>
 </head>
 <body>
-    <div class="container">
-        <form action="/home/${id}" method="post">
-            
-            <c:forEach items="${questions}" var="que">
-                <div>${que.content}</div>
-                <div class="wrapper">
-                    <c:forEach items="${que.examples}" var="exam">
-                        <div><input type="radio" class="form-check-input"  name="result${que.id}" value="${que.id}${exam.id.id}"></div>
-                    </c:forEach>
-                </div>
-            </c:forEach>
-            <button type="submit">전송</button>
-        </form>
+    <div class="main-app">
+        <div class="test-question">
+            <form action="/home/${id}" method="post">
+                <c:forEach items="${questions}" var="que">
+                    <div class="question">
+                        <div class="content">${que.content}</div>
+                        <div class="radiogroup">
+                            <div class="left">왼쪽</div>
+                            <c:forEach items="${que.examples}" var="exam">
+                                <div><input type="radio" class="form-check-input"  name="result${que.id}" value="${que.id}${exam.id.id}"></div>
+                            </c:forEach>
+                            <div class="right">오른쪽</div>
+                        </div>
+                    </div>
+                </c:forEach>
+                <button type="submit">전송</button>
+            </form>
+        </div>
     </div>
+    
 </body>
 </html>
