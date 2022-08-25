@@ -36,7 +36,6 @@ public class MatchingRepository {
     public List<Question> findQuestions(){
         List<Question> list = em.createQuery("select distinct q from Question q join fetch q.examples", Question.class).getResultList();
         
-        System.out.println(list.get(0).equals(list.get(1)));
         return list;
     }
 
