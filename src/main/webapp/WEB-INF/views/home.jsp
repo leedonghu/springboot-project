@@ -9,14 +9,7 @@
 <link rel="stylesheet" href="css/home.css">
 <link rel="stylesheet" href="js/home.js">
 <style>
-    .main-app{
-        margin-top: 100px;
-        display: flex;
-        justify-content: center;
-    }
-    .question{
-        display: flex;
-    }
+    
 </style>
 <title>Insert title here</title>
 </head>
@@ -36,7 +29,9 @@
                         </div>
                     </div>
                 </c:forEach>
-                <button type="submit">전송</button>
+                <div class="button">
+                    <button type="submit">전송</button>
+                </div>
             </form>
         </div>
     </div>
