@@ -14,6 +14,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-    <div class="container">${result}</div>
+    <div class="container">
+        <div>${result}</div>
+        <button onclick="location.href='/logout'">확인</button>
+    </div>
 </body>
 </html>
