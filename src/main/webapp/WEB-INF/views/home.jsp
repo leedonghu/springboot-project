@@ -21,11 +21,11 @@
                     <div class="question">
                         <div class="content">${que.content}</div>
                         <div class="radiogroup">
-                            <div class="left">왼쪽</div>
+                            <div class="left">${que.leftOption}</div>
                             <c:forEach items="${que.examples}" var="exam">
                                 <div><input type="radio" class="form-check-input"  name="result${que.id}" value="${que.id}${exam.id.id}"></div>
                             </c:forEach>
-                            <div class="right">오른쪽</div>
+                            <div class="right">${que.rightOption}</div>
                         </div>
                     </div>
                 </c:forEach>
