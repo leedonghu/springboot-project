@@ -21,7 +21,8 @@ public class Question {
     private Long id;
 
     private String Content;
-    
+    private String leftOption;
+    private String rightOption;
 
     @OneToMany(mappedBy = "question", fetch = FetchType.EAGER)
     private List<Example> examples = new ArrayList<>();
