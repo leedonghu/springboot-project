@@ -11,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.project.football_club_matching.entity.Example;
 import com.project.football_club_matching.entity.Member;
@@ -66,5 +67,17 @@ public class MatchingController {
     public String logout(HttpServletRequest request){
         sessionManager.expire(request);
         return "redirect:/home";
+    }
+
+    @RequestMapping(value = "/test", method = RequestMethod.GET)
+    public String test(){
+        return "test";
+    }
+
+    @RequestMapping(value = "/test/get", method = RequestMethod.POST)
+    public String get(@RequestParam("result1") String result1, @RequestParam("result2") String result2, Model model){
+        model.addAttribute("result1", result1);
+        model.addAttribute("result2", result2);
+        return "test2";
     }
 }
