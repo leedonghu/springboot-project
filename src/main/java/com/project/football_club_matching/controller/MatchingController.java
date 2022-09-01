@@ -80,4 +80,9 @@ public class MatchingController {
         model.addAttribute("result2", result2);
         return "test2";
     }
+
+    @RequestMapping(value = "/test3", method = RequestMethod.GET)
+    public String test3(){
+        return "test3";
+    }
 }

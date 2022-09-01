@@ -51,6 +51,7 @@
         <input type="text" name="result2" value="" id="result2">
         
     </form>
+    <input type="text" id=><input type="text">
     <div class="container">
         <div class="q">
             <div class="option left max" data-value="11" aria-checked="false" role="checkbox">
