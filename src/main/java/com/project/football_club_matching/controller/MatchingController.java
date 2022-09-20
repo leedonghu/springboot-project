@@ -85,4 +85,9 @@ public class MatchingController {
     public String test3(){
         return "test3";
     }
+
+    @RequestMapping(value = "/test4", method = RequestMethod.GET)
+    public String test4(){
+        return "test4";
+    }
 }
