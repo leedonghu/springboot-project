@@ -24,26 +24,55 @@
     span{
         display: inline-block;
     }
+
+    [type="radio"]{
+        appearance: none;
+        border: max(2px, 0.1em) solid #33a474;
+        border-radius: 50%;
+        width: 2em;
+        height: 2em;
+    }
+
+    [type="radio"]:checked{
+        background-color: #33a474;
+    }
+
+    [type="radio"]:focus-visible{
+        outline-offset: max(2px, 0.1em);
+        outline: max(2px, 0.1em) dotted #33a474;
+    }
+
+    [type="radio"]:hover{
+        box-shadow: 0 0 0 max(4px, 0.1em) lightgray;
+        cursor: pointer;
+    }
 </style>
 <title>Insert title here</title>
 </head>
 <body>
-    <div class="dicision">
-        <div class="option">
+    <div class="dicision" role="radiogroup">
+        <div class="option" role="radio" aria-checked="false">
             <span></span>
         </div>
-        <div class="option">
+        <div class="option" role="radio" aria-checked="false">
             <span></span>
         </div>
-        <div class="option">
+        <div class="option" role="radio" aria-checked="false">
             <span></span>
         </div>
-        <div class="option">
+        <div class="option" role="radio" aria-checked="false">
             <span></span>
         </div>
-        <div class="option">
+        <div class="option" role="radio" aria-checked="false">
             <span></span>
         </div>
+    </div>
+    <div class="radio">
+        <input type="radio" name="1">
+        <input type="radio" name="1">
+        <input type="radio" name="1">
+        <input type="radio" name="1">
+        <input type="radio" name="1">
     </div>
 </body>
 <script>
@@ -51,8 +80,13 @@
     console.log(button);
     for(let i = 0; i<button.length; i++){
         button[i].addEventListener("click", function(){
-            this.className += ' active';
-            this.style.backgroundColor = "#33a474";
+            if(this.classList.contains('active')){
+                this.classList.remove('active');
+                this.style.backgroundColor = "white";
+            }else{
+                this.classList.add('active');
+                this.style.backgroundColor = "#33a474";
+            }
         });
     }
 </script>
