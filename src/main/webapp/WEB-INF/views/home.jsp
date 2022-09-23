@@ -6,8 +6,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="js/home.js"></script>
 <link rel="stylesheet" href="css/home.css">
-<link rel="stylesheet" href="js/home.js">
 <style>
     
 </style>
@@ -22,8 +22,8 @@
                         <div class="content">${que.content}</div>
                         <div class="radiogroup">
                             <div class="left">${que.leftOption}</div>
-                            <c:forEach items="${que.examples}" var="exam">
-                                <div><input type="radio" class="form-check-input"  name="result${que.id}" value="${que.id}${exam.id.id}"></div>
+                            <c:forEach items="${que.examples}" var="exam" varStatus="status">
+                                <div><input type="radio" class="form-check-input ${status.index}"  name="result${que.id}" value="${que.id}${exam.id.id}"></div>
                             </c:forEach>
                             <div class="right">${que.rightOption}</div>
                         </div>

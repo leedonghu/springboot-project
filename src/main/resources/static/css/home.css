@@ -46,5 +46,68 @@ form{
 .radiogroup{
     display: flex;
     flex-direction: row;
+    align-items: center;
     margin-top: 20px;
+}
+
+[type="radio"].left.max{
+    appearance: none;
+    border: max(2px, 0.1em) solid #33a474;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+}
+
+[type="radio"].left.min{
+    appearance: none;
+    border: max(2px, 0.1em) solid #33a474;
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+}
+
+[type="radio"].mid{
+    appearance: none;
+    border: max(2px, 0.1em) solid gray;
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+}
+
+[type="radio"].right.min{
+    appearance: none;
+    border: max(2px, 0.1em) solid #ee0bbd;
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+}
+
+[type="radio"].right.max{
+    appearance: none;
+    border: max(2px, 0.1em) solid #ee0bbd;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+}
+
+[type="radio"]:checked.left{
+    background-color: #33a474;
+}
+
+[type="radio"]:checked.right{
+    background-color: #ee0bbd;
+}
+
+[type="radio"]:checked.mid{
+    background-color: gray;
+}
+
+[type="radio"]:focus-visible{
+    outline-offset: max(2px, 0.1em);
+    outline: max(2px, 0.1em) dotted #33a474;
+}
+
+[type="radio"]:hover{
+    box-shadow: 0 0 0 max(4px, 0.1em) lightgray;
+    cursor: pointer;
 }
