@@ -17,17 +17,33 @@
     <div class="main-app">
         <div class="test-question">
             <form action="/home/${id}" method="post">
-                <c:forEach items="${questions}" var="que">
-                    <div class="question">
-                        <div class="content">${que.content}</div>
-                        <div class="radiogroup">
-                            <div class="left">${que.leftOption}</div>
-                            <c:forEach items="${que.examples}" var="exam" varStatus="status">
-                                <div><input type="radio" class="form-check-input ${status.index}"  name="result${que.id}" value="${que.id}${exam.id.id}"></div>
-                            </c:forEach>
-                            <div class="right">${que.rightOption}</div>
+                <c:forEach items="${questions}" var="que" varStatus="i">
+                    <c:if test="${i.index eq 0}">
+                        <div class="question">
+                            <div class="content">${que.content}</div>
+                            <div class="radiogroup">
+                                <div class="left">${que.leftOption}</div>
+                                <c:forEach items="${que.examples}" var="exam" varStatus="status">
+                                    <div><input type="radio" class="form-check-input ${status.index}"  name="result${que.id}" value="${que.id}${exam.id.id}"></div>
+                                </c:forEach>
+                                <div class="right">${que.rightOption}</div>
+                            </div>
                         </div>
-                    </div>
+                    </c:if>
+                    <c:if test="${i.index ne 0}">
+                        <div class="question inactive">
+                            <div class="content">${que.content}</div>
+                            <div class="radiogroup">
+                                <div class="left">${que.leftOption}</div>
+                                <c:forEach items="${que.examples}" var="exam" varStatus="status">
+                                    <div>
+                                        <input type="radio" class="form-check-input ${status.index}"  name="result${que.id}" value="${que.id}${exam.id.id}">
+                                    </div>
+                                </c:forEach>
+                                <div class="right">${que.rightOption}</div>
+                            </div>
+                        </div>
+                    </c:if>
                 </c:forEach>
                 <div class="button">
                     <button type="submit">전송</button>

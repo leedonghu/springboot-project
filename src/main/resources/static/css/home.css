@@ -36,11 +36,9 @@ form{
     width: 100%;
     padding-bottom: 5%;
     margin-top: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     border-bottom: 0.1px solid gray;
-}
-
-.content{
-
 }
 
 .radiogroup{
@@ -54,40 +52,40 @@ form{
     appearance: none;
     border: max(2px, 0.1em) solid #33a474;
     border-radius: 50%;
-    width: 3em;
-    height: 3em;
+    width: 5em;
+    height: 5em;
 }
 
 [type="radio"].left.min{
     appearance: none;
     border: max(2px, 0.1em) solid #33a474;
     border-radius: 50%;
-    width: 2em;
-    height: 2em;
+    width: 4em;
+    height: 4em;
 }
 
 [type="radio"].mid{
     appearance: none;
     border: max(2px, 0.1em) solid gray;
     border-radius: 50%;
-    width: 2em;
-    height: 2em;
+    width: 3em;
+    height: 3em;
 }
 
 [type="radio"].right.min{
     appearance: none;
     border: max(2px, 0.1em) solid #ee0bbd;
     border-radius: 50%;
-    width: 2em;
-    height: 2em;
+    width: 4em;
+    height: 4em;
 }
 
 [type="radio"].right.max{
     appearance: none;
     border: max(2px, 0.1em) solid #ee0bbd;
     border-radius: 50%;
-    width: 3em;
-    height: 3em;
+    width: 5em;
+    height: 5em;
 }
 
 [type="radio"]:checked.left{
