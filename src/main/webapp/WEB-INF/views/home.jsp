@@ -21,7 +21,7 @@
                     <c:if test="${i.index eq 0}">
                         <div class="question">
                             <div class="content">${que.content}</div>
-                            <div class="radiogroup">
+                            <div class="radiogroup" checked="false">
                                 <div class="left">${que.leftOption}</div>
                                 <c:forEach items="${que.examples}" var="exam" varStatus="status">
                                     <div><input type="radio" class="form-check-input ${status.index}"  name="result${que.id}" value="${que.id}${exam.id.id}"></div>
@@ -33,7 +33,7 @@
                     <c:if test="${i.index ne 0}">
                         <div class="question inactive">
                             <div class="content">${que.content}</div>
-                            <div class="radiogroup">
+                            <div class="radiogroup" checked="false">
                                 <div class="left">${que.leftOption}</div>
                                 <c:forEach items="${que.examples}" var="exam" varStatus="status">
                                     <div>
@@ -45,8 +45,8 @@
                         </div>
                     </c:if>
                 </c:forEach>
-                <div class="button">
-                    <button type="submit">전송</button>
+                <div class="button-container">
+                    <button type="submit" class="button" disabled>전송</button>
                 </div>
             </form>
         </div>

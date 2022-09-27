@@ -32,7 +32,22 @@ document.addEventListener("DOMContentLoaded", function(e){
             next.classList.remove('inactive');
             next.scrollIntoView({behavior:"smooth", block:"center"});
             //console.log(this.checked);
+
+            /** check attribute 변경 */
+            var checked = this.parentElement.parentElement;
+            checked.setAttribute('checked', 'true');
+            
+            var radioGroup = document.getElementsByClassName("radiogroup");
+            radioCheck(radioGroup);
         });
     }
+
+    
 });
+
+function radioCheck(checked){
+    console.log(checked);
+}
+
+
 
