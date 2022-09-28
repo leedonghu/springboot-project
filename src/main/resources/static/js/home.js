@@ -37,16 +37,47 @@ document.addEventListener("DOMContentLoaded", function(e){
             var checked = this.parentElement.parentElement;
             checked.setAttribute('checked', 'true');
             
-            var radioGroup = document.getElementsByClassName("radiogroup");
-            radioCheck(radioGroup);
+            
         });
     }
+
+    /**버튼 클릭시 화면이동과 SUBMIT */
+    var button = document.getElementsByClassName('button')[0];
+    button.addEventListener("click", function(){
+        var radioGroup = document.getElementsByClassName("radiogroup");
+        
+        var bool = radioCheck(radioGroup);
+        
+        if(bool === true){
+            
+            document.getElementById("question-form").submit();
+        }else{
+            radioGroup[bool].scrollIntoView({behavior:"smooth", block:"center"});
+        }
+
+    })
 
     
 });
 
+/** 라디오버튼 체크 했는지 확인하는 메소드
+ * 모두 체크 해야지 true를 리턴하고 버튼을 활성화시킴
+ * 체크가 안된 라디오그룹의 index 번호를 리턴
+ */
 function radioCheck(checked){
-    console.log(checked);
+    
+    var arr = [];
+    for(var i=0; i<checked.length; i++){
+        arr[i] = checked[i].getAttribute('checked')
+    }
+
+    for(var i=0; i<arr.length; i++){
+        if(arr[i] == 'false'){
+            
+            return i;
+        }
+    }
+    return true;
 }
 
 

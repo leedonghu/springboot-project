@@ -16,7 +16,7 @@
 <body>
     <div class="main-app">
         <div class="test-question">
-            <form action="/home/${id}" method="post">
+            <form action="/home/${id}" method="post" id="question-form">
                 <c:forEach items="${questions}" var="que" varStatus="i">
                     <c:if test="${i.index eq 0}">
                         <div class="question">
@@ -24,7 +24,9 @@
                             <div class="radiogroup" checked="false">
                                 <div class="left">${que.leftOption}</div>
                                 <c:forEach items="${que.examples}" var="exam" varStatus="status">
-                                    <div><input type="radio" class="form-check-input ${status.index}"  name="result${que.id}" value="${que.id}${exam.id.id}"></div>
+                                    <div class="radio-container">
+                                        <input type="radio" class="form-check-input ${status.index}"  name="result${que.id}" value="${que.id}${exam.id.id}">
+                                    </div>
                                 </c:forEach>
                                 <div class="right">${que.rightOption}</div>
                             </div>
@@ -36,7 +38,7 @@
                             <div class="radiogroup" checked="false">
                                 <div class="left">${que.leftOption}</div>
                                 <c:forEach items="${que.examples}" var="exam" varStatus="status">
-                                    <div>
+                                    <div class="radio-container">
                                         <input type="radio" class="form-check-input ${status.index}"  name="result${que.id}" value="${que.id}${exam.id.id}">
                                     </div>
                                 </c:forEach>
@@ -46,7 +48,9 @@
                     </c:if>
                 </c:forEach>
                 <div class="button-container">
-                    <button type="submit" class="button" disabled>전송</button>
+                    <button type="button" class="button">
+                        <span class="span-button">확인</span>
+                    </button>
                 </div>
             </form>
         </div>
