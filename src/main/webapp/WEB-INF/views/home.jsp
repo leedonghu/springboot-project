@@ -11,10 +11,13 @@
 <style>
     
 </style>
-<title>Insert title here</title>
+<title>PL BIG6 추천</title>
 </head>
 <body>
     <div class="main-app">
+        <header>
+            <div class="title">나에게 어울리는 축구팀</div>
+        </header>
         <div class="test-question">
             <form action="/home/${id}" method="post" id="question-form">
                 <c:forEach items="${questions}" var="que" varStatus="i">
@@ -22,13 +25,13 @@
                         <div class="question">
                             <div class="content">${que.content}</div>
                             <div class="radiogroup" checked="false">
-                                <div class="left">${que.leftOption}</div>
+                                <div class="left-option">${que.leftOption}</div>
                                 <c:forEach items="${que.examples}" var="exam" varStatus="status">
                                     <div class="radio-container">
                                         <input type="radio" class="form-check-input ${status.index}"  name="result${que.id}" value="${que.id}${exam.id.id}">
                                     </div>
                                 </c:forEach>
-                                <div class="right">${que.rightOption}</div>
+                                <div class="right-option">${que.rightOption}</div>
                             </div>
                         </div>
                     </c:if>
@@ -36,13 +39,13 @@
                         <div class="question inactive">
                             <div class="content">${que.content}</div>
                             <div class="radiogroup" checked="false">
-                                <div class="left">${que.leftOption}</div>
+                                <div class="left-option">${que.leftOption}</div>
                                 <c:forEach items="${que.examples}" var="exam" varStatus="status">
                                     <div class="radio-container">
                                         <input type="radio" class="form-check-input ${status.index}"  name="result${que.id}" value="${que.id}${exam.id.id}">
                                     </div>
                                 </c:forEach>
-                                <div class="right">${que.rightOption}</div>
+                                <div class="right-option">${que.rightOption}</div>
                             </div>
                         </div>
                     </c:if>
@@ -54,7 +57,9 @@
                 </div>
             </form>
         </div>
+        <footer>
+            <div>ldh930517@gmail.com</div>
+        </footer>
     </div>
-    
 </body>
 </html>
