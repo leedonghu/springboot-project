@@ -18,6 +18,18 @@
         <header>
             <div class="title">나에게 어울리는 축구팀</div>
         </header>
+        <div class="tips">
+            <div class="tip">
+                <div>⚽</div>
+                <div>pl의 big6팀만 추천합니다</div>
+            </div>
+            <div class="tip">
+                <div>🛸</div>
+                <div>뇌필셜입니다</div>
+            </div>
+            <div class="shape"></div>
+            <div class="shadow"></div>
+        </div>
         <div class="test-question">
             <form action="/home/${id}" method="post" id="question-form">
                 <c:forEach items="${questions}" var="que" varStatus="i">
@@ -28,7 +40,7 @@
                                 <div class="left-option">${que.leftOption}</div>
                                 <c:forEach items="${que.examples}" var="exam" varStatus="status">
                                     <div class="radio-container">
-                                        <input type="radio" class="form-check-input ${status.index}"  name="result${que.id}" value="${que.id}${exam.id.id}">
+                                        <input type="radio" class="form-check-input ${status.index}"  name="result${que.id}" value="${que.id}${exam.id.id}"></input>
                                     </div>
                                 </c:forEach>
                                 <div class="right-option">${que.rightOption}</div>
