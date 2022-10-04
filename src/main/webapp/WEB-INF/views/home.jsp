@@ -20,15 +20,15 @@
         </header>
         <div class="tips">
             <div class="tip">
-                <div>⚽</div>
-                <div>pl의 big6팀만 추천합니다</div>
+                <div class="tip-img">⚽</div>
+                <div class="tip-text">Premier League의 BIG6 팀만 추천합니다</div>
             </div>
             <div class="tip">
-                <div>🛸</div>
-                <div>뇌필셜입니다</div>
+                <div class="tip-img">🛸</div>
+                <div class="tip-text">질문에 공신력은 없습니다</div>
             </div>
-            <div class="shape"></div>
-            <div class="shadow"></div>
+            <!-- <div class="shape"></div>
+            <div class="shadow"></div> -->
         </div>
         <div class="test-question">
             <form action="/home/${id}" method="post" id="question-form">
@@ -70,7 +70,12 @@
             </form>
         </div>
         <footer>
-            <div>ldh930517@gmail.com</div>
+            <div class="notice">
+                <strong>주의사항 : </strong>
+                해당 사이트는 사이드 프로젝트로 만들어진 것으로 <strong>질문이나 결과에 어떠한 공신력도 없습니다.</strong>
+                혹여나 문제점이 발견되시면 아래의 이메일로 문의해주시면 감사하겠습니다.
+            </div>
+            <div class="contact">contact : ldh930517@gmail.com</div>
         </footer>
     </div>
 </body>
