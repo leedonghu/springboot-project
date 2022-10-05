@@ -60,7 +60,7 @@ public class MatchingController {
         
 
         model.addAttribute("result", result);
-        return "result";
+        return "load";
     }
 
     @RequestMapping(value = "/logout", method = RequestMethod.GET)
@@ -89,5 +89,11 @@ public class MatchingController {
     @RequestMapping(value = "/test4", method = RequestMethod.GET)
     public String test4(){
         return "test4";
+    }
+
+    @RequestMapping(value = "/result/{result}", method = RequestMethod.GET)
+    public String result(@PathVariable("result") String result, Model model){
+        model.addAttribute("result", result);
+        return "result";
     }
 }
