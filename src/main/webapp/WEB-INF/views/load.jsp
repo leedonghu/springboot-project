@@ -3,17 +3,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="/css/result.css">
-
+<link rel="stylesheet" href="/css/load.css">
+</style>
 <title>Insert title here</title>
 </head>
 <body>
-    <div class="container">
-        <div>${result}</div>
-        <button onclick="location.href='/logout'" class="btn">
-            <span class="span-button">확인</span>
-        </button>
+    <div class="loader">
+
     </div>
+    <div style="display: none;" id="result">${result}</div>
 </body>
-<script src="/js/result.js"></script>
+<script src="/js/load.js"></script>
 </html>
