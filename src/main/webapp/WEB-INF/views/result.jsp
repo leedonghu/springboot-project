@@ -9,11 +9,19 @@
 </head>
 <body>
     <div class="container">
-        <div>${result}</div>
+        <div id="title">${result}</div>
+        <div class="share">
+            <div class="kakao">
+                <a id="kakaotalk-sharing-btn">
+                    <img src="/img/kakao.png" alt="" width="50px" height="50px">
+                </a>
+            </div>
+        </div>
         <button onclick="location.href='/logout'" class="btn">
             <span class="span-button">확인</span>
         </button>
     </div>
 </body>
+<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 <script src="/js/result.js"></script>
 </html>
