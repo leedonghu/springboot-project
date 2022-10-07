@@ -103,4 +103,13 @@ window.onload = function(){
             ],
           });
     }
+
+    var facebook = document.getElementById('facebook-btn');
+    facebook.addEventListener('click', function(){
+      console.log("click");
+      /** localhost는 공유가 안됨, 고정 아이피사용 */ 
+      window.open("https://www.facebook.com/sharer/sharer.php?u="+ encodeURIComponent("https://sports.news.naver.com/news?oid=417&aid=0000858571"), "_blank", "width=600,height=400");
+    });
+
+    
 }
