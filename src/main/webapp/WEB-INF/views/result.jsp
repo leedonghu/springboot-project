@@ -17,27 +17,27 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
 <body>
     <div class="container">
         <div id="title">${result}</div>
-        <div class="share">
-            <div class="kakao">
-                <a id="kakaotalk-sharing-btn">
-                    <img src="/img/kakao.png" alt="" width="50px" height="50px">
-                </a>
-            </div>
-            <div class="facebook">
-                <a id="facebook-btn">
-                    <img src="/img/facebook.png" alt="" width="50px" height="50px">
-                </a>
-            </div>
-            <div class="naver">
-                <a id="naver-btn" href="javascript:sendNaverLine();">
-                    <img src="/img/line.png" alt="" width="50px" height="50px">
-                </a>
-            </div>
-
-        </div>
         <button onclick="location.href='/logout'" class="btn">
             <span class="span-button">확인</span>
         </button>
+    </div>
+    <div class="share">
+        <div class="kakao">
+            <a id="kakaotalk-sharing-btn">
+                <img src="/img/kakao.png" alt="" width="50px" height="50px">
+            </a>
+        </div>
+        <div class="facebook">
+            <a id="facebook-btn">
+                <img src="/img/facebook.png" alt="" width="50px" height="50px">
+            </a>
+        </div>
+        <div class="naver">
+            <a id="naver-btn" href="javascript:sendNaverLine();">
+                <img src="/img/line.png" alt="" width="50px" height="50px">
+            </a>
+        </div>
+
     </div>
      
 </body>

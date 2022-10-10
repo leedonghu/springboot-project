@@ -10,24 +10,31 @@ window.onload = function(){
     var arsUrl = 'https://ifh.cc/g/bt1aAo.png';
 
     var url = '';
+    var container = document.getElementsByClassName('container')[0];
     var link = document.getElementById('kakaotalk-sharing-btn');
     switch(title){
         case '맨유' : url = manuUrl;
+        container.style.backgroundColor = "#ec2b2e";
         break;
 
         case '맨시티' : url = mancUrl;
+        container.style.backgroundColor = "#6cadde";
         break;
 
         case '리버풀' : url = rivUrl;
+        container.style.backgroundColor = "#d4001f";
         break;
 
         case '토트넘' : url = totUrl;
+        container.style.backgroundColor = "#fff";
         break;
 
         case '첼시' : url = cheUrl;
+        container.style.backgroundColor = "#001487";
         break;
 
         case '아스날' : url = arsUrl;
+        container.style.backgroundColor = "#e50007";
         break;
     }
     kakao();
