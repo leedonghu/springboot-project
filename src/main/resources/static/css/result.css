@@ -28,7 +28,14 @@ body{
     justify-content: space-between;
     margin-top: 20px;
     cursor: pointer;
-    width: 40vw;
+    width: 30vw;
+    
+}
+
+.address{
+    width: 100%;
+    border-bottom: 1px double #fff;
+    border-top: 1px double #fff;
 }
 
 .btn{
