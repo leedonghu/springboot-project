@@ -15,8 +15,23 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
 <title>Insert title here</title>
 </head>
 <body>
+    <a href="/statistics">통계</a>
     <div class="container">
-        <div id="title">${result}</div>
+        <div id="title">${result.name}</div>
+        <div class="address">
+            <div class="homepage-address">
+                <a href="${result.address.homepage}">홈페이지</a>  
+            </div>
+            <div class="facebook-address">
+                <a href="${result.address.facebook}">페이스북</a>
+            </div>
+            <div class="instagram-address">
+                <a href="${result.address.instagram}">인스타그램</a>
+            </div>
+            <div class="youtube-address">
+                <a href="${result.address.youtube}">youtube</a>
+            </div>
+        </div>
         <button onclick="location.href='/logout'" class="btn">
             <span class="span-button">확인</span>
         </button>
