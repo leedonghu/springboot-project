@@ -1,5 +1,6 @@
 package com.project.football_club_matching.entity;
 
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
@@ -18,6 +19,9 @@ public class Team {
     private String name;
 
     private Integer count;
+
+    @Embedded
+    private Address address;
 
     public void setCount(int count){
         this.count = count;

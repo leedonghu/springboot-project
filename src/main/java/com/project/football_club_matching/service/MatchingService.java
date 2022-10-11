@@ -67,6 +67,17 @@ public class MatchingService {
         return teamName;
     }
 
+    public Team getTeam(String name){
+        Team team = matchingRepository.findTeam(name);
+        return team;
+        
+    }
+
+    public List<Team> getTeams(){
+        List<Team> teams = matchingRepository.findTeams();
+        return teams;
+    }
+
     static String result(List<Example> list){
         Map<String, Integer> map = new HashMap<>();
         int max = Integer.MIN_VALUE;

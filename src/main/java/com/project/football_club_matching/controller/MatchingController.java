@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.project.football_club_matching.entity.Example;
 import com.project.football_club_matching.entity.Member;
 import com.project.football_club_matching.entity.Question;
 import com.project.football_club_matching.entity.QuestionResult;
+import com.project.football_club_matching.entity.Team;
 import com.project.football_club_matching.service.MatchingService;
 import com.project.football_club_matching.session.SessionManager;
 
@@ -93,7 +93,15 @@ public class MatchingController {
 
     @RequestMapping(value = "/result/{result}", method = RequestMethod.GET)
     public String result(@PathVariable("result") String result, Model model){
-        model.addAttribute("result", result);
+        Team team = matchingService.getTeam(result);
+        model.addAttribute("result", team);
         return "result";
+    }
+
+    @RequestMapping(value = "/statistics")
+    public String statistics(Model model){
+        List<Team> teams = matchingService.getTeams();
+        model.addAttribute("teams", teams);
+        return "statistics";
     }
 }

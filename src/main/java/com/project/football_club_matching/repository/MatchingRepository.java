@@ -39,6 +39,11 @@ public class MatchingRepository {
         return list;
     }
 
+    public List<Team> findTeams(){
+        List<Team> teams = em.createQuery("select t from Team t order by t.count desc", Team.class).getResultList();
+        return teams;
+    }
+
     @Transactional
     public Example findExample(Long questionId, Long exampleId){
         TypedQuery<Example> query = em.createQuery("select e from Example e where e.id.id = :id and e.id.questionId = :questionId", Example.class)
