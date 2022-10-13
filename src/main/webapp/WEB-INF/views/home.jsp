@@ -14,7 +14,22 @@
 <title>PL BIG6 추천</title>
 </head>
 <body>
-    <a href="localhost:8080/statistics">통계</a>
+    <div class="navbar">
+        <div class="logo">
+            <a href="/home">
+                <img src="/img/logo.png" alt="">
+            </a>
+        </div>
+        <div class="option">
+            <div class="home">
+                <a href="/home">팀 추천</a>
+            </div>
+            <div class="statistics">
+                <a href="/statistics">통계</a>
+            </div>
+        </div>
+        <div class="space"></div>
+    </div>
     <div class="main-app">
         <header>
             <div class="title">나에게 어울리는 축구팀</div>

@@ -6,10 +6,37 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="stylesheet" href="/css/statistics.css">
 <title>Insert title here</title>
 </head>
 <body>
-    <canvas id="myChart" width="400" height="400"></canvas>
+    <div class="navbar">
+        <div class="logo">
+            <a href="/home">
+                <img src="/img/logo.png" alt="">
+            </a>
+        </div>
+        <div class="option">
+            <div class="home">
+                <a href="/home">팀 추천</a>
+            </div>
+            <div class="statistics">
+                <a href="/statistics">통계</a>
+            </div>
+        </div>
+        <div class="space"></div>
+    </div>
+    <div id="container">
+        <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
+    <footer>
+        <div class="notice">
+            <strong>주의사항 : </strong>
+            해당 사이트는 사이드 프로젝트로 만들어진 것으로 <strong>질문이나 결과에 어떠한 공신력도 없습니다.</strong>
+            혹여나 문제점이 발견되시면 아래의 이메일로 문의해주시면 감사하겠습니다.
+        </div>
+        <div class="contact">contact : ldh930517@gmail.com</div>
+    </footer>
 </body>
 <script src="/js/statistics.js"></script>
 <script>
@@ -36,21 +63,13 @@
    
     
     const myChart = new Chart(ctx, {
-        type: 'bar',
+        type: 'pie',
         data: {
             labels: [name[0], name[1],name[2], name[3], name[4], name[5]],
             datasets: [{
-                label: '팀 퍼센티지',
+                label: '팀 횟수',
                 data: [count[0], count[1], count[2], count[3], count[4], count[5]],
                 backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
                     'rgba(255, 99, 132, 1)',
                     'rgba(54, 162, 235, 1)',
                     'rgba(255, 206, 86, 1)',
@@ -58,15 +77,19 @@
                     'rgba(153, 102, 255, 1)',
                     'rgba(255, 159, 64, 1)'
                 ],
+                borderColor: [
+                    'rgba(255, 99, 132, 0)',
+                    'rgba(54, 162, 235, 0)',
+                    'rgba(255, 206, 86, 0)',
+                    'rgba(75, 192, 192, 0)',
+                    'rgba(153, 102, 255, 0)',
+                    'rgba(255, 159, 64, 0)'
+                ],
                 borderWidth: 1
             }]
         },
         options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
+            responsive : false
         }
     });
 </script>

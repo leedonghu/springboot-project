@@ -15,7 +15,22 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
 <title>Insert title here</title>
 </head>
 <body>
-    <a href="/statistics">통계</a>
+    <div class="navbar">
+        <div class="logo">
+            <a href="/home">
+                <img src="/img/logo.png" alt="">
+            </a>
+        </div>
+        <div class="option">
+            <div class="home">
+                <a href="/home">팀 추천</a>
+            </div>
+            <div class="statistics">
+                <a href="/statistics">통계</a>
+            </div>
+        </div>
+        <div class="space"></div>
+    </div>
     <div class="container">
         <div id="title">${result.name}</div>
         <div class="address">
@@ -54,6 +69,14 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
         </div>
 
     </div>
+    <footer>
+        <div class="notice">
+            <strong>주의사항 : </strong>
+            해당 사이트는 사이드 프로젝트로 만들어진 것으로 <strong>질문이나 결과에 어떠한 공신력도 없습니다.</strong>
+            혹여나 문제점이 발견되시면 아래의 이메일로 문의해주시면 감사하겠습니다.
+        </div>
+        <div class="contact">contact : ldh930517@gmail.com</div>
+    </footer>
      
 </body>
 <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
