@@ -1,6 +1,7 @@
 window.onload = function(){
     Kakao.init('3b751d01e9c710efb57fdf81a42def17');
     console.log(Kakao.isInitialized());
+    console.log(true);
     var title = document.getElementById('title').innerText;
     var manuUrl = 'https://ifh.cc/g/9vgczC.jpg';
     var mancUrl = 'https://ifh.cc/g/AJ0oR9.jpg';

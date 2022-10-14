@@ -35,7 +35,9 @@
             해당 사이트는 사이드 프로젝트로 만들어진 것으로 <strong>질문이나 결과에 어떠한 공신력도 없습니다.</strong>
             혹여나 문제점이 발견되시면 아래의 이메일로 문의해주시면 감사하겠습니다.
         </div>
-        <div class="contact">contact : ldh930517@gmail.com</div>
+        <div class="contact">
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;e-mail : ldh930517@gmail.com</span>
+        </div>
     </footer>
 </body>
 <script src="/js/statistics.js"></script>
@@ -52,10 +54,32 @@
     console.log(total);
     let teams1 = "<c:out value='${teams}'/>";
     let teams2 = '${teams[0].count}';
+
+    let color = [];
     for(let i=0;i<array.length; i++){
         // console.log(array[i]);
         count[i] = Math.round(array[i].split(',')[0] / total *1000) /10 ;
         name[i] = array[i].split(',')[1];
+
+        switch(name[i]){
+        case '맨유' : color[i] = 'rgba(235, 43, 46, 1)';
+        break;
+
+        case '맨시티' : color[i] = 'rgba(108, 173, 222, 1)';
+        break;
+
+        case '리버풀' : color[i] = 'rgba(212, 0, 31, 1)';
+        break;
+
+        case '토트넘' : color[i] = 'rgba(255, 255, 255, 1)';
+        break;
+
+        case '첼시' : color[i] = 'rgba(0, 20, 135, 1)';
+        break;
+
+        case '아스날' : color[i] = 'rgba(229, 0, 7, 1)';
+        break;
+    }
     }
     for(let i=0; i<name.length; i++){
         console.log(name[i]+","+count[i]);
@@ -70,20 +94,20 @@
                 label: '팀 횟수',
                 data: [count[0], count[1], count[2], count[3], count[4], count[5]],
                 backgroundColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
+                    color[0],
+                    color[1],
+                    color[2],
+                    color[3],
+                    color[4],
+                    color[5]
                 ],
                 borderColor: [
-                    'rgba(255, 99, 132, 0)',
-                    'rgba(54, 162, 235, 0)',
-                    'rgba(255, 206, 86, 0)',
-                    'rgba(75, 192, 192, 0)',
-                    'rgba(153, 102, 255, 0)',
-                    'rgba(255, 159, 64, 0)'
+                    'rgba(0, 0, 0, 1)',
+                    'rgba(0, 0, 0, 1)',
+                    'rgba(0, 0, 0, 1)',
+                    'rgba(0, 0, 0, 1)',
+                    'rgba(0, 0, 0, 1)',
+                    'rgba(0, 0, 0, 1)'
                 ],
                 borderWidth: 1
             }]

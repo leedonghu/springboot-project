@@ -34,17 +34,30 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
     <div class="container">
         <div id="title">${result.name}</div>
         <div class="address">
-            <div class="homepage-address">
-                <a href="${result.address.homepage}">홈페이지</a>  
+            <div class="address-title">
+                공식 사이트
             </div>
-            <div class="facebook-address">
-                <a href="${result.address.facebook}">페이스북</a>
-            </div>
-            <div class="instagram-address">
-                <a href="${result.address.instagram}">인스타그램</a>
-            </div>
-            <div class="youtube-address">
-                <a href="${result.address.youtube}">youtube</a>
+            <div class="address-link">
+                <div class="homepage-address">
+                    <a href="${result.address.homepage}">
+                        <img src="/img/축구공.jpg" alt="" id="address-img" width="50px" height="50px">
+                    </a>  
+                </div>
+                <div class="facebook-address">
+                    <a href="${result.address.facebook}">
+                        <img src="/img/facebook.png" alt="" width="50px" height="50px">
+                    </a>
+                </div>
+                <div class="instagram-address">
+                    <a href="${result.address.instagram}">
+                        <img src="/img/인스타.png" alt="" width="50px" height="50px">
+                    </a>
+                </div>
+                <div class="youtube-address">
+                    <a href="${result.address.youtube}">
+                        <img src="/img/유튜브.png" alt="" width="50px" height="50px">
+                    </a>
+                </div>
             </div>
         </div>
         <button onclick="location.href='/logout'" class="btn">
@@ -75,50 +88,42 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
             해당 사이트는 사이드 프로젝트로 만들어진 것으로 <strong>질문이나 결과에 어떠한 공신력도 없습니다.</strong>
             혹여나 문제점이 발견되시면 아래의 이메일로 문의해주시면 감사하겠습니다.
         </div>
-        <div class="contact">contact : ldh930517@gmail.com</div>
+        <div class="contact">
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;e-mail : ldh930517@gmail.com</span>
+        </div>
     </footer>
      
 </body>
 <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 <script src="/js/result.js"></script>
 <script>
-    var title = document.getElementById('title').innerText;
-    var manuUrl = 'https://ifh.cc/g/9vgczC.jpg';
-    var mancUrl = 'https://ifh.cc/g/AJ0oR9.jpg';
-    var rivUrl = 'https://ifh.cc/g/dJSJ9W.jpg';
-    var totUrl = 'https://ifh.cc/g/THmAKr.png';
-    var cheUrl = 'https://ifh.cc/g/hBYB2n.jpg';
-    var arsUrl = 'https://ifh.cc/g/bt1aAo.png';
+    window.onload = function(){
 
-    var url = '';
-    var link = document.getElementById('kakaotalk-sharing-btn');
-    switch(title){
-        case '맨유' : url = manuUrl;
-        break;
-
-        case '맨시티' : url = mancUrl;
-        break;
-
-        case '리버풀' : url = rivUrl;
-        break;
-
-        case '토트넘' : url = totUrl;
-        break;
-
-        case '첼시' : url = cheUrl;
-        break;
-
-        case '아스날' : url = arsUrl;
-        break;
-    }
-
-    function sendNaverLine(){
-      
-      var title = "나에게 어울리는 축구팀은";
-    //   var link = "http://localhost:8080/home";
-      var img = url;
-      var lineUrl = "http://line.me/R/msg/text/?" + encodeURIComponent(title+img);
-      return lineUrl;
+        var title = document.getElementById('title').innerText;
+        var manuUrl = 'https://ifh.cc/g/9vgczC.jpg';
+        var mancUrl = 'https://ifh.cc/g/AJ0oR9.jpg';
+        var rivUrl = 'https://ifh.cc/g/dJSJ9W.jpg';
+        var totUrl = 'https://ifh.cc/g/THmAKr.png';
+        var cheUrl = 'https://ifh.cc/g/hBYB2n.jpg';
+        var arsUrl = 'https://ifh.cc/g/bt1aAo.png';
+    
+        var url = '';
+        var link = document.getElementById('kakaotalk-sharing-btn');
+        var img = document.getElementById('address-img');
+        var totAddressTitle = document.getElementsByClassName('address-title');
+        var totAddressLink = document.getElementsByClassName('address-link');
+        var title = document.getElementById('title');
+        console.log(img+" "+totAddressTitle+" "+totAddressLink+" "+title);
+        console.log(totAddressLink[0]);
+    
+        function sendNaverLine(){
+          
+          var title = "나에게 어울리는 축구팀은";
+        //   var link = "http://localhost:8080/home";
+          var img = url;
+          var lineUrl = "http://line.me/R/msg/text/?" + encodeURIComponent(title+img);
+          return lineUrl;
+        }
     }
 </script>
 

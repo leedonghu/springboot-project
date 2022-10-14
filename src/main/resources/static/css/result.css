@@ -3,6 +3,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .navbar{
@@ -79,6 +80,7 @@ body{
     flex-direction: row;
     justify-content: space-between;
     margin-top: 20px;
+    margin-bottom: 20px;
     cursor: pointer;
     width: 30vw;
     
@@ -88,6 +90,36 @@ body{
     width: 100%;
     border-bottom: 1px double #fff;
     border-top: 1px double #fff;
+    display: flex;
+    
+
+}
+.address-title{
+    border: 1px double #fff;
+    flex-grow: 1;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    padding-top: 10px;
+}
+
+.address-link{
+    border: 1px double #fff;
+    flex-grow: 8;
+    padding-left: 10px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.address-link div{
+    padding-right: 10px;
+}
+
+.address-link div a{
+    text-decoration: none;
 }
 
 .btn{
@@ -105,7 +137,6 @@ body{
     font-weight: 600;
     color: #fff;
 }
-
 footer{
     display: flex;
     justify-content: center;
@@ -116,15 +147,27 @@ footer{
     width: 100%;
     height: 100px;
     background-color: #fff;
-    margin-top: 60px;
+    margin-top: auto;
+    position: relative;
 }
 
 .contact{
     font-size: 1rem;
     line-height: 1.5;
-    color: #abafb8;
+    color: #fff;
     padding-top: 20px;
     font-weight: 600;
+    position: absolute;
+    bottom: 0;
+    background-color: black;
+    width: 100%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.contact span{
+    display: inline-block;
+    margin-bottom: 10px;
 }
 
 .notice{

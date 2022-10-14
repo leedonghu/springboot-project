@@ -91,7 +91,9 @@
                 해당 사이트는 사이드 프로젝트로 만들어진 것으로 <strong>질문이나 결과에 어떠한 공신력도 없습니다.</strong>
                 혹여나 문제점이 발견되시면 아래의 이메일로 문의해주시면 감사하겠습니다.
             </div>
-            <div class="contact">contact : ldh930517@gmail.com</div>
+            <div class="contact">
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;e-mail : ldh930517@gmail.com</span>
+            </div>
         </footer>
     </div>
 </body>
