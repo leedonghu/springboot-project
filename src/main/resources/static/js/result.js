@@ -2,7 +2,7 @@ window.onload = function(){
     Kakao.init('3b751d01e9c710efb57fdf81a42def17');
     console.log(Kakao.isInitialized());
     console.log(true);
-    var title = document.getElementById('title').innerText;
+    var title = document.getElementById('title');
     var manuUrl = 'https://ifh.cc/g/9vgczC.jpg';
     var mancUrl = 'https://ifh.cc/g/AJ0oR9.jpg';
     var rivUrl = 'https://ifh.cc/g/dJSJ9W.jpg';
@@ -13,29 +13,47 @@ window.onload = function(){
     var url = '';
     var container = document.getElementsByClassName('container')[0];
     var link = document.getElementById('kakaotalk-sharing-btn');
-    switch(title){
+
+
+    var img = document.getElementById('address-img');
+    var totAddressTitle = document.getElementsByClassName('address-title')[0];
+    var totAddressLink = document.getElementsByClassName('address-link')[0];
+    
+    console.log(img+" "+totAddressTitle+" "+totAddressLink+" "+title);
+    console.log(totAddressLink[0]);
+    switch(title.innerText){
         case '맨유' : url = manuUrl;
         container.style.backgroundColor = "#ec2b2e";
+        img.src = "https://ifh.cc/g/9vgczC.jpg";
         break;
 
         case '맨시티' : url = mancUrl;
         container.style.backgroundColor = "#6cadde";
+        img.src = "https://ifh.cc/g/AJ0oR9.jpg";
         break;
 
         case '리버풀' : url = rivUrl;
         container.style.backgroundColor = "#d4001f";
+        img.src = "https://ifh.cc/g/dJSJ9W.jpg";
         break;
 
         case '토트넘' : url = totUrl;
         container.style.backgroundColor = "#fff";
+        title.style.color = "#000";
+        totAddressTitle.style.color = "#000";
+        totAddressTitle.style.border = "1px double #000";
+        totAddressLink.style.border = "1px double #000";
+        img.src = "https://ifh.cc/g/THmAKr.png";
         break;
 
         case '첼시' : url = cheUrl;
         container.style.backgroundColor = "#001487";
+        img.src = "https://ifh.cc/g/hBYB2n.jpg";
         break;
 
         case '아스날' : url = arsUrl;
         container.style.backgroundColor = "#e50007";
+        img.src = "https://ifh.cc/g/bt1aAo.png";
         break;
     }
     kakao();
@@ -49,7 +67,7 @@ window.onload = function(){
             objectType: 'feed',
             content: {
               title: '당신에게 어울리는 축구팀',
-              description: title,
+              description: title.innerText,
               imageUrl:
               url,
               link: {

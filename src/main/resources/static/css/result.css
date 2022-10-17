@@ -73,6 +73,8 @@ body{
     font-weight: bold;
     color: #fff;
     padding-bottom: 50px;
+    width: 100%;
+    text-align: center;
 }
 
 .share{
@@ -90,18 +92,20 @@ body{
     width: 100%;
     border-bottom: 1px double #fff;
     border-top: 1px double #fff;
+    
     display: flex;
     
 
 }
 .address-title{
-    border: 1px double #fff;
+    border-right: 1px double #000;
     flex-grow: 1;
     text-align: center;
     font-size: 18px;
     font-weight: 600;
     color: #fff;
     padding-top: 10px;
+    width: 20%;
 }
 
 .address-link{
@@ -112,6 +116,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 80%;
 }
 
 .address-link div{
@@ -130,6 +135,7 @@ body{
     height: 60px;
     cursor: pointer;
     margin-top: 50px;
+    width: 100%;
 }
 
 .span-button{
@@ -174,4 +180,206 @@ footer{
     width: 80%;
     font-weight: 300;
     margin-top: 60px;
+}
+
+@media screen and (max-width: 600px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .navbar{
+        display: flex;
+        position: sticky;
+        justify-content: space-between;
+        align-items: center;
+        top: 0;
+        margin: 0;
+        width: 100%;
+        z-index: 10;
+        background-color: #fff;
+    }
+    
+    .logo{
+        width: 40px;
+        height: 40px;
+        width: 10%;
+        margin-left: 10px;
+    }
+    .space{
+        width: 10%;
+    }
+    .option{
+        display: flex;
+        justify-content: center;
+        width: 80%;
+    }
+    
+    .statistics a{
+        text-decoration: none;
+        font-size: 1.125em;
+        font-weight: 600;
+        color: black;
+    }
+    
+    .home{
+        margin-right: 50px;
+    }
+    
+    .home a{
+        text-decoration: none;
+        font-size: 1.125em;
+        font-weight: 600;
+        color: black;
+    }
+    
+    .logo img{
+        width: 40px;
+        height: 40px;
+        
+    }
+    
+    .container{
+        height: 40vh;
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 80px;
+        box-shadow: 0px 0px 20px #000;
+    }
+    
+    #title{
+        font-size: 50px;
+        font-weight: bold;
+        color: #fff;
+        padding-bottom: 50px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .share{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        width: 30vw;
+        
+    }
+
+    .share > div > a > img{
+        width: 25px;
+        height: 25px;
+    }
+    
+    .address{
+        width: 100%;
+        border-bottom: 1px double #fff;
+        border-top: 1px double #fff;
+        
+        display: flex;
+        
+    
+    }
+    .address-title{
+        border-right: 1px double #000;
+        flex-grow: 1;
+        text-align: center;
+        font-size: 10px;
+        font-weight: 600;
+        color: #fff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        width: 45%;
+    }
+    
+    .address-link{
+        border: 1px double #fff;
+        flex-grow: 8;
+        padding-left: 0px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 55%;
+    }
+    
+    .address-link div{
+        padding-right: 5px;
+        
+    }
+    
+    .address-link div a{
+        text-decoration: none;
+        
+    }
+    
+    .btn{
+        background-color: #0884f8;
+        border-color: #0884f8;
+        border-radius: 40px;
+        min-width: 160px;
+        height: 60px;
+        cursor: pointer;
+        margin-top: 50px;
+        width: 50%;
+    }
+    
+    .span-button{
+        font-size: 18px;
+        font-weight: 600;
+        color: #fff;
+    }
+    footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-top: 3px solid #eeeff1;
+        padding: 10px 0px 50px;
+        width: 100%;
+        height: 100px;
+        background-color: #fff;
+        margin-top: 70px;
+        position: relative;
+    }
+    
+    .contact{
+        font-size: 0.5rem;
+        line-height: 1.5;
+        color: #fff;
+        padding-top: 10px;
+        font-weight: 600;
+        position: absolute;
+        bottom: 0;
+        background-color: black;
+        width: 100%;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+    }
+    
+    .contact span{
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+    
+    .notice{
+        width: 80%;
+        font-weight: 300;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        font-size: 10px;
+    }
+
+    .address-link > div > a > img{
+        width: 15px;
+        height: 15px;
+    }
 }

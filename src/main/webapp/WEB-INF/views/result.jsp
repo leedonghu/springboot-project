@@ -97,7 +97,6 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
 <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 <script src="/js/result.js"></script>
 <script>
-    window.onload = function(){
 
         var title = document.getElementById('title').innerText;
         var manuUrl = 'https://ifh.cc/g/9vgczC.jpg';
@@ -108,14 +107,6 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
         var arsUrl = 'https://ifh.cc/g/bt1aAo.png';
     
         var url = '';
-        var link = document.getElementById('kakaotalk-sharing-btn');
-        var img = document.getElementById('address-img');
-        var totAddressTitle = document.getElementsByClassName('address-title');
-        var totAddressLink = document.getElementsByClassName('address-link');
-        var title = document.getElementById('title');
-        console.log(img+" "+totAddressTitle+" "+totAddressLink+" "+title);
-        console.log(totAddressLink[0]);
-    
         function sendNaverLine(){
           
           var title = "나에게 어울리는 축구팀은";
@@ -124,7 +115,6 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
           var lineUrl = "http://line.me/R/msg/text/?" + encodeURIComponent(title+img);
           return lineUrl;
         }
-    }
 </script>
 
 </html>
