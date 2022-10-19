@@ -27,7 +27,7 @@
         <div class="space"></div>
     </div>
     <div id="container">
-        <canvas id="myChart" width="400" height="400"></canvas>
+        <canvas id="myChart"></canvas>
     </div>
     <footer>
         <div class="notice">
