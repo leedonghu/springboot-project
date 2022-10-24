@@ -19,4 +19,4 @@ spring:
       suffix: .jsp
 
 server:
-  port: $PORT
+  port: ${port:8080}
