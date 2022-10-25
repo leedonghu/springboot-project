@@ -46,14 +46,14 @@ public class MatchingController {
 
         }
         
-        return "home";
+        return "home1";
     }
 
     @RequestMapping(value = "/home/{id}", method = RequestMethod.POST)
     public String getData(QuestionResult questionResult, Model model, @PathVariable("id") String id, HttpServletRequest request){
         Member checkMember = (Member) sessionManager.getSession(request);
         if(checkMember == null){
-            return "home";
+            return "home1";
         }
         
         String result = matchingService.getResult(questionResult, Long.parseLong(id));
@@ -95,13 +95,13 @@ public class MatchingController {
     public String result(@PathVariable("result") String result, Model model){
         Team team = matchingService.getTeam(result);
         model.addAttribute("result", team);
-        return "result";
+        return "result1";
     }
 
     @RequestMapping(value = "/statistics")
     public String statistics(Model model){
         List<Team> teams = matchingService.getTeams();
         model.addAttribute("teams", teams);
-        return "statistics";
+        return "statistics1";
     }
 }
