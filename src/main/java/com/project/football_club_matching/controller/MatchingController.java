@@ -38,10 +38,16 @@ public class MatchingController {
             matchingService.saveMember(member);
             model.addAttribute("id", member.getId());
             model.addAttribute("questions", list);
+            for(Question q : list){
+                System.out.println(q.getContent());
+            }
             System.out.println("세션 생성");
         }else{
             model.addAttribute("id", checkMember.getId());
             model.addAttribute("questions", list);
+            for(Question q : list){
+                System.out.println(q.getContent());
+            }
             System.out.println("세션 이미 있음");
 
         }
