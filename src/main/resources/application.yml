@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/project?serverTimezone=UTC&characterEncoding=UTF-8
-    username: root
-    password: wnddkdwjdqhcjfl1
+    url: mysql://b00f679f1f391f:9dd13396@us-cdbr-east-06.cleardb.net/heroku_9e90639e44a4709?reconnect=true
+    username: b00f679f1f391f
+    password: 9dd13396
     
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
