@@ -4,11 +4,11 @@
 <head>
 <!-- You can use Open Graph tags to customize link previews.
 Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
-<meta property="og:url"           content="https://localhost:8080/result/맨유" />
+<meta property="og:url"           content="" />
 <meta property="og:type"          content="website" />
-<meta property="og:title"         content="test" />
-<meta property="og:description"   content="test" />
-<meta property="og:image"         content="https://ifh.cc/g/9vgczC.jpg" />
+<meta property="og:title"         content="" />
+<meta property="og:description"   content="" />
+<meta property="og:image"         content="" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="/css/result.css">
 
@@ -40,22 +40,22 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
             <div class="address-link">
                 <div class="homepage-address">
                     <a href="${result.address.homepage}">
-                        <img src="/img/축구공.jpg" alt="" id="address-img" width="50px" height="50px">
+                        <img src="/img/축구공.jpg" alt="" id="address-img" width="40px" height="40px">
                     </a>  
                 </div>
                 <div class="facebook-address">
                     <a href="${result.address.facebook}">
-                        <img src="/img/facebook.png" alt="" width="50px" height="50px">
+                        <img src="/img/facebook.png" alt="" width="40px" height="40px">
                     </a>
                 </div>
                 <div class="instagram-address">
                     <a href="${result.address.instagram}">
-                        <img src="/img/인스타.png" alt="" width="50px" height="50px">
+                        <img src="/img/인스타.png" alt="" width="40px" height="40px">
                     </a>
                 </div>
                 <div class="youtube-address">
                     <a href="${result.address.youtube}">
-                        <img src="/img/유튜브.png" alt="" width="50px" height="50px">
+                        <img src="/img/유튜브.png" alt="" width="40px" height="40px">
                     </a>
                 </div>
             </div>
@@ -80,7 +80,8 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
                 <img src="/img/line.png" alt="" width="50px" height="50px">
             </a>
         </div>
-
+        <div id="fb-root"></div>
+        <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">공유</a></div>
     </div>
     <footer>
         <div class="notice">
@@ -92,8 +93,9 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
             <span>&nbsp;&nbsp;&nbsp;&nbsp;e-mail : ldh930517@gmail.com</span>
         </div>
     </footer>
-     
+    
 </body>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v15.0" nonce="5juMjy7F"></script>
 <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 <script src="/js/result.js"></script>
 <script>
