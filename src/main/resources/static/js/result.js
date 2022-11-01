@@ -132,17 +132,18 @@ window.onload = function(){
 
     var facebook = document.getElementById('facebook-btn');
     facebook.addEventListener('click', function(){
+      
       console.log("click");
       /** localhost는 공유가 안됨, 고정 아이피사용 */ 
-      window.open("https://www.facebook.com/sharer/sharer.php?u="+ encodeURIComponent("https://football-club-matching.herokuapp.com/home"), "_blank", "width=600,height=400");
+      window.open("https://www.facebook.com/sharer/sharer.php?u="+ encodeURIComponent("https://football-club-matching.herokuapp.com/result/맨유"), title.innerText, "width=600,height=400");
     });
-
-
+    
+    
     var facebookUrl = "https://football-club-matching.herokuapp.com/result/" + title.innerText;
     var facebookTitle = "축구팀 추천";
     var facebookDescription = "PL의 빅6팀중 한 팀을 추천해줍니다"
     var facebookImg = url;
-    var head = document.getElementsByTagName('head');
+    var head = document.getElementsByTagName('head')[0];
     
     document.querySelector('meta[property="og:url"]').setAttribute('content', facebookUrl);
     document.querySelector('meta[property="og:title"]').setAttribute('content', facebookTitle);
@@ -150,6 +151,22 @@ window.onload = function(){
     document.querySelector('meta[property="og:image"]').setAttribute('content', facebookImg);
 
     console.log(document.querySelector('meta[property="og:url"]').getAttribute('content'));
+    
+    
+    let temp = document.createElement("div");
+    temp.innerHTML = `<meta property="og:url" content="${facebookUrl}" />
+    <meta property="og:title" content="${facebookTitle}" />
+    <meta property="og:description" content="${facebookDescription}" />
+    <meta property="og:image" content="${facebookImg}" />`;
+    
+    console.log(Array.from(temp.children).length);
+    for(var i=0; i<Array.from(temp.children).length; i++){
+      head.appendChild(Array.from(temp.children)[i]);
+      console.log(Array.from(temp.children)[i]);
+      console.log(i);
+    }
+    
+
 
 
     
