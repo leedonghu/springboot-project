@@ -4,11 +4,11 @@
 <head>
 <!-- You can use Open Graph tags to customize link previews.
 Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
-<meta property="og:url"           content="" />
+<meta property="og:url"           content="https://football-club-matching.herokuapp.com/home" />
 <meta property="og:type"          content="website" />
-<meta property="og:title"         content="" />
-<meta property="og:description"   content="" />
-<meta property="og:image"         content="" />
+<meta property="og:title"         content="나에게 어울리는 축구팀" />
+<meta property="og:description"   content="PL의 BIG6팀중 한팀을 추천해 드립니다" />
+<meta property="og:image"         content="${result.imgUrl}" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="/css/result.css">
 

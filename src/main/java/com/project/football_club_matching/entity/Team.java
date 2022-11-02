@@ -19,6 +19,7 @@ public class Team {
     private String name;
 
     private Integer count;
+    private String imgUrl;
 
     @Embedded
     private Address address;

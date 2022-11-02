@@ -160,13 +160,18 @@ window.onload = function(){
     <meta property="og:image" content="${facebookImg}" />`;
     
     console.log(Array.from(temp.children).length);
+    console.log(temp.childNodes);
+    console.log(temp.children)
     for(var i=0; i<Array.from(temp.children).length; i++){
       head.appendChild(Array.from(temp.children)[i]);
       console.log(Array.from(temp.children)[i]);
       console.log(i);
     }
     
-
+    $('head').append(StringTool.format('<meta property="og:url" content="{0} />', facebookUrl ));
+    $('head').append(StringTool.format('<meta property="og:title" content="{0} />', facebookTitle ));
+    $('head').append(StringTool.format('<meta property="og:description" content="{0} />', facebookDescription ));
+    $('head').append(StringTool.format('<meta property="og:image" content="{0} />', facebookImg ));
 
 
     
