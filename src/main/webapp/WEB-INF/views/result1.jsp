@@ -76,7 +76,7 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
             </a>
         </div>
         <div class="naver">
-            <a id="naver-btn" href="javascript:sendNaverLine();">
+            <a id="naver-btn">
                 <img src="/img/line.png" alt="" width="50px" height="50px">
             </a>
         </div>
@@ -98,29 +98,6 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v15.0" nonce="5juMjy7F"></script>
 <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 <script src="/js/result.js"></script>
-<script>
 
-        var title = document.getElementById('title').innerText;
-        var manuUrl = 'https://ifh.cc/g/9vgczC.jpg';
-        var mancUrl = 'https://ifh.cc/g/AJ0oR9.jpg';
-        var rivUrl = 'https://ifh.cc/g/dJSJ9W.jpg';
-        var totUrl = 'https://ifh.cc/g/THmAKr.png';
-        var cheUrl = 'https://ifh.cc/g/hBYB2n.jpg';
-        var arsUrl = 'https://ifh.cc/g/bt1aAo.png';
-    
-        var url = '';
-        function sendNaverLine(){
-          
-          var title = "나에게 어울리는 축구팀은";
-        //   var link = "http://localhost:8080/home";
-          var summary = "PL의 BIG6중 어울리는 팀을 추천해드립니다";
-          var link = "https://football-club-matching.herokuapp.com/home";
-          var img = "${result.imgUrl}";
-          console.log(img);
-          var lineUrl = "http://line.me/R/msg/text/?" + encodeURIComponent(title+"\n"+summary+"\n"+link+"\n"+img);
-        //   document.location = lineUrl;
-        window.open(lineUrl);
-        }
-</script>
 
 </html>

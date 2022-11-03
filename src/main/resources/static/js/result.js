@@ -75,42 +75,6 @@ window.onload = function(){
                 webUrl: 'https://localhost:8080/home',
               },
             },
-            // itemContent: {
-            //   profileText: 'Kakao',
-            //   profileImageUrl: 'https://mud-kage.kakao.com/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
-            //   titleImageUrl: 'https://mud-kage.kakao.com/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
-            //   titleImageText: 'Cheese cake',
-            //   titleImageCategory: 'Cake',
-            //   items: [
-            //     {
-            //       item: 'Cake1',
-            //       itemOp: '1000원',
-            //     },
-            //     {
-            //       item: 'Cake2',
-            //       itemOp: '2000원',
-            //     },
-            //     {
-            //       item: 'Cake3',
-            //       itemOp: '3000원',
-            //     },
-            //     {
-            //       item: 'Cake4',
-            //       itemOp: '4000원',
-            //     },
-            //     {
-            //       item: 'Cake5',
-            //       itemOp: '5000원',
-            //     },
-            //   ],
-            //   sum: 'Total',
-            //   sumOp: '15000원',
-            // },
-            // social: {
-            //   likeCount: 10,
-            //   commentCount: 20,
-            //   sharedCount: 30,
-            // },
             buttons: [
               {
                 title: '웹으로 이동',
@@ -138,4 +102,22 @@ window.onload = function(){
       window.open("https://www.facebook.com/sharer/sharer.php?u="+ encodeURIComponent("https://football-club-matching.herokuapp.com/result/맨유"), title.innerText, "width=600,height=400");
     });
     
+    function sendNaverLine(){
+          
+      var title = "나에게 어울리는 축구팀은";
+    //   var link = "http://localhost:8080/home";
+      var summary = "PL의 BIG6중 어울리는 팀을 추천해드립니다";
+      var link = "https://football-club-matching.herokuapp.com/home";
+      var img = "${result.imgUrl}";
+      console.log(img);
+      var lineUrl = "http://line.me/R/msg/text/?" + encodeURIComponent(title+"\n"+summary+"\n"+link+"\n"+img);
+    //   document.location = lineUrl;
+      window.open(lineUrl);
+    }
+
+
+
+    var naver = document.getElementById("naver-btn");
+    console.log(naver);
+    naver.addEventListener("click", sendNaverLine);
 }
