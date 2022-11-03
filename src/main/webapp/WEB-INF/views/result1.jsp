@@ -113,9 +113,13 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
           
           var title = "나에게 어울리는 축구팀은";
         //   var link = "http://localhost:8080/home";
-          var img = url;
-          var lineUrl = "http://line.me/R/msg/text/?" + encodeURIComponent(title+img);
-          return lineUrl;
+          var summary = "PL의 BIG6중 어울리는 팀을 추천해드립니다";
+          var link = "https://football-club-matching.herokuapp.com/home";
+          var img = "${result.imgUrl}";
+          console.log(img);
+          var lineUrl = "http://line.me/R/msg/text/?" + encodeURIComponent(title+"\n"+summary+"\n"+link+"\n"+img);
+        //   document.location = lineUrl;
+        window.open(lineUrl);
         }
 </script>
 
