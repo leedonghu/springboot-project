@@ -20,7 +20,7 @@ header{
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 25vh;
+    height: 210px;
     background-color: #520480;
     
 }
@@ -39,7 +39,7 @@ header{
     position: relative;
     background-color: #520480;
     width: 100vw;
-    height: 20vh;
+    height: 170px;
     z-index: 1;
 }
 
@@ -331,7 +331,7 @@ footer{
 
 @media screen and (max-width: 600px){
     html, body{
-        height: 100%;
+        height: auto;
         width: 100%;
     }
     
@@ -347,7 +347,7 @@ footer{
         justify-content: center;
         align-items: center;
         width: 100vw;
-        height: 15vh;
+        height: 127px;
         background-color: #520480;
         
     }
@@ -366,7 +366,7 @@ footer{
         position: relative;
         background-color: #520480;
         width: 100vw;
-        height: 10vh;
+        height: 90px;
         z-index: 1;
     }
     
@@ -537,8 +537,9 @@ footer{
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: center;
         margin-top: 20px;
-        /* width: 100%; */
+        width: 100%;
     }
     
     .radio-container{

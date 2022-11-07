@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="/css/load.css">
 </style>
-<title>Insert title here</title>
+<title>로딩중</title>
 </head>
 <body>
     <div class="loader">

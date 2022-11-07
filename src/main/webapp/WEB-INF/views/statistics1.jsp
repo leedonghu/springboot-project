@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <link rel="stylesheet" href="/css/statistics.css">
-<title>Insert title here</title>
+<title>통계</title>
 </head>
 <body>
     <div class="navbar">

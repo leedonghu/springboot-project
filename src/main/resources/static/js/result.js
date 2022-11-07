@@ -120,4 +120,9 @@ window.onload = function(){
     var naver = document.getElementById("naver-btn");
     console.log(naver);
     naver.addEventListener("click", sendNaverLine);
+
+    // var screen = window.innerWidth;
+    // console.log(screen);
+    // var icon = document.getElementsByClassName("fa-share-nodes")[0];
+    // screen >= 600 ? icon.classList.add("fa-3x") : icon.classList.add("fa-lg")
 }

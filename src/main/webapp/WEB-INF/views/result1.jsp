@@ -11,8 +11,10 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
 <meta property="og:image"         content="${result.imgUrl}" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="/css/result.css">
+<script src="https://kit.fontawesome.com/1a3214f3e3.js" crossorigin="anonymous"></script>
 
-<title>Insert title here</title>
+
+<title>당신에게 어울리는 팀은 ${result.name} 입니다</title>
 </head>
 <body>
     <div class="navbar">
@@ -65,6 +67,9 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
         </button>
     </div>
     <div class="share">
+        <div>
+            <i class="fa-solid fa-share-nodes fa-lg"></i>
+        </div>
         <div class="kakao">
             <a id="kakaotalk-sharing-btn">
                 <img src="/img/kakao.png" alt="" width="50px" height="50px">
@@ -80,8 +85,6 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
                 <img src="/img/line.png" alt="" width="50px" height="50px">
             </a>
         </div>
-        <div id="fb-root"></div>
-        <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">공유</a></div>
     </div>
     <footer>
         <div class="notice">

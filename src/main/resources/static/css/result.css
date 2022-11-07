@@ -19,8 +19,8 @@ body{
 }
 
 .logo{
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     width: 10%;
     margin-left: 10px;
 }
@@ -58,7 +58,7 @@ body{
 }
 
 .container{
-    height: 50vh;
+    height: 425px;
     width: 50vw;
     display: flex;
     flex-direction: column;
@@ -81,12 +81,22 @@ body{
 .share{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 20px;
     margin-bottom: 20px;
     cursor: pointer;
     width: 30vw;
     
+}
+
+.share div {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.share div i {
+    width: 50px;
+    height: 50px;
 }
 
 .address{
@@ -254,7 +264,7 @@ footer{
     }
     
     .container{
-        height: 40vh;
+        height: 425px;
         width: 50vw;
         display: flex;
         flex-direction: column;
@@ -266,7 +276,7 @@ footer{
     }
     
     #title{
-        font-size: 50px;
+        font-size: 80px;
         font-weight: bold;
         color: #fff;
         padding-bottom: 50px;
@@ -277,7 +287,7 @@ footer{
     .share{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         margin-top: 20px;
         margin-bottom: 20px;
         cursor: pointer;
@@ -285,9 +295,30 @@ footer{
         
     }
 
+    .share div{
+        margin-left: 5px;
+        margin-right: 5px;
+        position: relative;
+    }
+
     .share > div > a > img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .share div i {
+        
         width: 25px;
         height: 25px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        
+    }
+
+    .fa-share-nodes{
+        vertical-align: middle;
     }
     
     .address{
