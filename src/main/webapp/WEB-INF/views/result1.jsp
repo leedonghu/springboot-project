@@ -67,23 +67,26 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
         </button>
     </div>
     <div class="share">
-        <div>
-            <i class="fa-solid fa-share-nodes fa-lg"></i>
+        <div class="share-icon">
+            <img src="/img/share.png" width="30px" height="30px">
         </div>
         <div class="kakao">
             <a id="kakaotalk-sharing-btn">
                 <img src="/img/kakao.png" alt="" width="50px" height="50px">
             </a>
+            <span>카카오톡</span>
         </div>
         <div class="facebook">
             <a id="facebook-btn">
                 <img src="/img/facebook.png" alt="" width="50px" height="50px">
             </a>
+            <span>페이스북</span>
         </div>
         <div class="naver">
             <a id="naver-btn">
                 <img src="/img/line.png" alt="" width="50px" height="50px">
             </a>
+            <span>라인</span>
         </div>
     </div>
     <footer>
