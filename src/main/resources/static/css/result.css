@@ -58,7 +58,7 @@ body{
 }
 
 .container{
-    height: 425px;
+    height: 450px;
     width: 50vw;
     display: flex;
     flex-direction: column;
@@ -70,28 +70,57 @@ body{
 }
 
 #title{
-    font-size: 100px;
+    margin-top: 10px;
+}
+
+div.title-img{
+    align-items: center;
+    margin-left: 20px;
+}
+
+
+img.title-img{
+    width: 150px;
+    height: 150px;
+}
+
+.title-name{
+    font-size: 60px;
     font-weight: bold;
     color: #fff;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
     width: 100%;
     text-align: center;
 }
 
 .share{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    cursor: pointer;
-    width: 50vw;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* cursor: pointer;
+    width: 50vw; */
     
 }
 
-.share div {
-    margin-left: 5px;
-    margin-right: 5px;
+.share p {
+   text-align: center; 
+}
+
+.share-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    width: 50vw;
+}
+
+.share-btn div {
+    margin-left: 10px;
+    margin-right: 10px;
     display: flex;
     flex-direction: column;
 }
@@ -99,7 +128,8 @@ body{
 .share-icon {
     
     margin-right: 20px;
-    margin-top: 10px;
+    margin-top: 15px;
+
 }
 
 .share div span{
@@ -111,7 +141,7 @@ body{
     width: 100%;
     border-bottom: 1px double #fff;
     border-top: 1px double #fff;
-    
+    height: 55px;
     display: flex;
     
 
@@ -123,7 +153,7 @@ body{
     font-size: 15px;
     font-weight: 600;
     color: #fff;
-    padding-top: 10px;
+    padding-top: 13px;
     width: 30%;
     padding-bottom: 10px;
 }
@@ -158,7 +188,7 @@ body{
     min-width: 260px;
     height: 60px;
     cursor: pointer;
-    margin-top: 50px;
+    margin-top: 20px;
     width: 50%;
 }
 
@@ -272,7 +302,7 @@ footer{
     }
     
     .container{
-        height: 425px;
+        height: 450px;
         width: 50vw;
         display: flex;
         flex-direction: column;
@@ -283,37 +313,66 @@ footer{
         border-radius: 20px;
     }
     
-    #title{
-        font-size: 80px;
+    #title  {
+        margin-top: 10px;
+    }
+    div.title-img{
+        
+        margin-left: 15px;
+    }
+
+    img.title-img{
+        width: 150px;
+        height: 150px;
+    }
+    
+    .title-name{
+        font-size: 60px;
         font-weight: bold;
         color: #fff;
-        padding-bottom: 50px;
+        
         width: 100%;
         text-align: center;
     }
     
     .share{
         display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        /* cursor: pointer; */
+        /* width: 30vw; */
+        
+    }
+
+    .share p {
+        text-align: center; 
+     }
+
+    .share-btn{
+        display: flex;
         flex-direction: row;
         justify-content: center;
         margin-top: 20px;
         margin-bottom: 20px;
         cursor: pointer;
-        width: 30vw;
-        
+        width: 50vw;
     }
 
-    .share div{
-        margin-left: 5px;
-        margin-right: 5px;
+    .share-btn div{
+        margin-left: 10px;
+        margin-right: 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
+    
     .share-icon img{
         width: 15px;
         height: 15px;
+        margin-top: 10px;
     }
 
     .share > div > a > img{
@@ -333,7 +392,7 @@ footer{
         width: 100%;
         border-bottom: 1px double #fff;
         border-top: 1px double #fff;
-        
+        height: 35px;
         display: flex;
         
     
@@ -381,7 +440,8 @@ footer{
         min-width: 100px;
         height: 60px;
         cursor: pointer;
-        margin-top: 50px;
+        margin-top: 20px;
+        margin-bottom: 20px;
         width: 50%;
     }
     

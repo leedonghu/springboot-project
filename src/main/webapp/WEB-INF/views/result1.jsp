@@ -34,7 +34,14 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
         <div class="space"></div>
     </div>
     <div class="container">
-        <div id="title">${result.name}</div>
+        <div id="title">
+            <div class="title-img">
+                <img src="${result.imgUrl}" alt="" class="title-img" width="200px" height="200px">
+            </div>
+            <div class="title-name">
+                ${result.name}
+            </div>
+        </div>
         <div class="address">
             <div class="address-title">
                 공식 사이트
@@ -67,26 +74,31 @@ Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
         </button>
     </div>
     <div class="share">
-        <div class="share-icon">
-            <img src="/img/share.png" width="30px" height="30px">
+        <div>
+            <p>친구들에게 공유해보세요</p>
         </div>
-        <div class="kakao">
-            <a id="kakaotalk-sharing-btn">
-                <img src="/img/kakao.png" alt="" width="50px" height="50px">
-            </a>
-            <span>카카오톡</span>
-        </div>
-        <div class="facebook">
-            <a id="facebook-btn">
-                <img src="/img/facebook.png" alt="" width="50px" height="50px">
-            </a>
-            <span>페이스북</span>
-        </div>
-        <div class="naver">
-            <a id="naver-btn">
-                <img src="/img/line.png" alt="" width="50px" height="50px">
-            </a>
-            <span>라인</span>
+        <div class="share-btn">
+            <div class="share-icon">
+                <img src="/img/share.png" width="20px" height="20px">
+            </div>
+            <div class="kakao">
+                <a id="kakaotalk-sharing-btn">
+                    <img src="/img/kakao.png" alt="" width="50px" height="50px">
+                </a>
+                <span>카카오톡</span>
+            </div>
+            <div class="facebook">
+                <a id="facebook-btn">
+                    <img src="/img/facebook.png" alt="" width="50px" height="50px">
+                </a>
+                <span>페이스북</span>
+            </div>
+            <div class="naver">
+                <a id="naver-btn">
+                    <img src="/img/line.png" alt="" width="50px" height="50px">
+                </a>
+                <span>라인</span>
+            </div>
         </div>
     </div>
     <footer>
