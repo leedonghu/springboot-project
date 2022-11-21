@@ -79,15 +79,15 @@ window.onload = function(){
               {
                 title: '웹으로 이동',
                 link: {
-                  mobileWebUrl: 'https://localhost:8080/home',
-                  webUrl: 'https://localhost:8080/home',
+                  mobileWebUrl: 'https://football-club-matching.loca.lt/home',
+                  webUrl: 'https://football-club-matching.loca.lt/home',
                 },
               },
               {
-                title: '앱으로 이동',
+                title: '통계보기',
                 link: {
-                  mobileWebUrl: 'https://localhost:8080/home',
-                  webUrl: 'https://localhost:8080/home',
+                  mobileWebUrl: 'https://football-club-matching.loca.lt/statistics',
+                  webUrl: 'https://football-club-matching.loca.lt/statistics',
                 },
               },
             ],
@@ -99,7 +99,7 @@ window.onload = function(){
       
       console.log("click");
       /** localhost는 공유가 안됨, 고정 아이피사용 */ 
-      window.open("https://www.facebook.com/sharer/sharer.php?u="+ encodeURIComponent("https://football-club-matching.herokuapp.com/result/맨유"), title.innerText, "width=600,height=400");
+      window.open("https://www.facebook.com/sharer/sharer.php?u="+ encodeURIComponent("https://football-club-matching.loca.lt/result/" + title.innerText), title.innerText, "width=600,height=400");
     });
     
     function sendNaverLine(){
@@ -107,7 +107,7 @@ window.onload = function(){
       var title = "나에게 어울리는 축구팀은";
     //   var link = "http://localhost:8080/home";
       var summary = "PL의 BIG6중 어울리는 팀을 추천해드립니다";
-      var link = "https://football-club-matching.herokuapp.com/home";
+      var link = "https://football-club-matching.loca.lt/home";
       var img = "${result.imgUrl}";
       console.log(img);
       var lineUrl = "http://line.me/R/msg/text/?" + encodeURIComponent(title+"\n"+summary+"\n"+link+"\n"+img);

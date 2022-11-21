@@ -4,7 +4,7 @@
 <head>
 <!-- You can use Open Graph tags to customize link previews.
 Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
-<meta property="og:url"           content="https://football-club-matching.herokuapp.com/home" />
+<meta property="og:url"           content="https://football-club-matching.loca.lt/${result.name}" />
 <meta property="og:type"          content="website" />
 <meta property="og:title"         content="나에게 어울리는 축구팀" />
 <meta property="og:description"   content="PL의 BIG6팀중 한팀을 추천해 드립니다" />
