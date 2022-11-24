@@ -78,7 +78,7 @@ public class MatchingController {
     }
 
     @ResponseBody
-    @CrossOrigin(origins = "https://leedonghu.github.io/")
+    @CrossOrigin(origins = {"https://leedonghu.github.io/","http://localhost:8081/"})
     @RequestMapping(value = "/test", method = RequestMethod.GET)
     public String test(){
         return "test";
@@ -90,10 +90,16 @@ public class MatchingController {
         model.addAttribute("result2", result2);
         return "test2";
     }
-
+    
+    @ResponseBody
+    @CrossOrigin(origins = {"https://leedonghu.github.io/","http://localhost:8081/"})
     @RequestMapping(value = "/test3", method = RequestMethod.GET)
-    public String test3(){
-        return "test3";
+    public List<Question> test3(){
+        List<Question> list = matchingService.findQuestions();
+        
+        
+        System.out.println(list);
+        return list;
     }
 
     @RequestMapping(value = "/test4", method = RequestMethod.GET)
