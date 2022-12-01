@@ -67,6 +67,29 @@ public class MatchingService {
         return teamName;
     }
 
+    public String getResult(QuestionResult result){
+        List<String> resultList = result.getResultList();
+        List<Example> examples = new ArrayList<>();
+        for(String str : resultList){
+            Long questionId = 0l;
+            Long exampleId = 0l;
+            if(str.length() != 2){
+                questionId = Long.parseLong(str.substring(0, 2));
+                exampleId = (long) (str.charAt(2) - '0');
+            }else{
+                questionId = (long) (str.charAt(0) -'0');
+                exampleId = (long) (str.charAt(1) -'0');
+            }
+            
+            Example example = matchingRepository.findExample(questionId, exampleId);
+            examples.add(example);
+            System.out.println(questionId + " " + exampleId);
+        }
+        String teamName = result(examples);
+        countTeam(teamName);
+        return teamName;
+    }
+
     public Team getTeam(String name){
         Team team = matchingRepository.findTeam(name);
         return team;
