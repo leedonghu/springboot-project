@@ -87,10 +87,11 @@ public class MatchingController {
     @ResponseBody
     @CrossOrigin(origins = {"https://leedonghu.github.io/","http://localhost:8081/"})
     @RequestMapping(value = "/result", method = RequestMethod.POST)
-    public String result(QuestionResult questionResult){
+    public Team result(QuestionResult questionResult){
         System.out.println("result"+questionResult.getResult1());
         String result = matchingService.getResult(questionResult);
-        return result;
+        Team team = matchingService.getTeam(result);
+        return team;
     }
 
     @RequestMapping(value = "/test/get", method = RequestMethod.POST)
