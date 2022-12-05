@@ -112,6 +112,15 @@ public class MatchingController {
         return list;
     }
 
+    @ResponseBody
+    @CrossOrigin
+    @RequestMapping(value = "/getStatistics")
+    public List<Team> getStatistics(){
+        List<Team> teams = matchingService.getTeams();
+        
+        return teams;
+    }
+
     @RequestMapping(value = "/test4", method = RequestMethod.GET)
     public String test4(){
         return "test4";
