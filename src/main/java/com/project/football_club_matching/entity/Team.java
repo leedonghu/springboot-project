@@ -20,6 +20,7 @@ public class Team {
 
     private Integer count;
     private String imgUrl;
+    private String color;
 
     @Embedded
     private Address address;

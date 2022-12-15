@@ -118,6 +118,7 @@ public class MatchingController {
     public List<Team> getStatistics(){
         List<Team> teams = matchingService.getTeams();
         
+        
         return teams;
     }
 
