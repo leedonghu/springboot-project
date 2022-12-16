@@ -103,7 +103,7 @@ public class MatchingService {
 
     static String result(List<Example> list){
         Map<String, Integer> map = new HashMap<>();
-        int max = Integer.MIN_VALUE;
+        int max = 0;
         String teamName = "";
         for(Example example : list){
             String[] arr = example.getTeams().split(",");
@@ -112,15 +112,19 @@ public class MatchingService {
             for(String name : arr){
                 if(!map.containsKey(name)){
                     map.put(name, score);
-                    if(score > max){
-                        teamName = name;
-                    }
+                    
                 }else{
                     map.put(name, map.get(name) + score);
-                    if(map.get(name) + score > max){
-                        teamName = name;
-                    }
+                    
                 }
+            }
+        }
+
+        for(Map.Entry<String, Integer>entry : map.entrySet()){
+            System.out.println("team name : " + entry.getKey() + ", team score : " + entry.getValue());
+            if(entry.getValue() > 0){
+                teamName = entry.getKey();
+                max = entry.getValue();
             }
         }
 
