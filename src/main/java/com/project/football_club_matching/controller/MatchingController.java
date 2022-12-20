@@ -78,14 +78,14 @@ public class MatchingController {
     }
 
     @ResponseBody
-    @CrossOrigin(origins = {"https://leedonghu.github.io/","http://localhost:8081/"})
+    @CrossOrigin
     @RequestMapping(value = "/test", method = RequestMethod.GET)
     public String test(){
         return "test";
     }
 
     @ResponseBody
-    @CrossOrigin(origins = {"https://leedonghu.github.io/","http://localhost:8081/"})
+    @CrossOrigin
     @RequestMapping(value = "/result", method = RequestMethod.POST)
     public Team result(QuestionResult questionResult){
         System.out.println("result"+questionResult.getResult1());
@@ -102,7 +102,7 @@ public class MatchingController {
     }
     
     @ResponseBody
-    @CrossOrigin(origins = {"https://leedonghu.github.io/","http://localhost:8081/"})
+    @CrossOrigin
     @RequestMapping(value = "/test3", method = RequestMethod.GET)
     public List<Question> test3(){
         List<Question> list = matchingService.findQuestions();

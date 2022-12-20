@@ -122,7 +122,7 @@ public class MatchingService {
 
         for(Map.Entry<String, Integer>entry : map.entrySet()){
             System.out.println("team name : " + entry.getKey() + ", team score : " + entry.getValue());
-            if(entry.getValue() > 0){
+            if(entry.getValue() > max){
                 teamName = entry.getKey();
                 max = entry.getValue();
             }
